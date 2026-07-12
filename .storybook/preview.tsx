@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react-vite';
 import { ThemeProvider, CssBaseline } from '@mui/material';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import '@fontsource-variable/roboto';
 import { theme } from '../src/theme';
 
@@ -18,13 +20,15 @@ const preview: Preview = {
       test: 'todo',
     },
   },
-  // Every story renders inside the KDS theme, so Storybook shows the *themed*
-  // component library — the surface you use to customize it.
+  // Every story renders inside the KDS theme + a date-picker localization context,
+  // so MUI and MUI X components are all themed and functional.
   decorators: [
     (Story) => (
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Story />
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <Story />
+        </LocalizationProvider>
       </ThemeProvider>
     ),
   ],

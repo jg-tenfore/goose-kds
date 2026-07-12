@@ -1,7 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Box, TextField, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import dayjs from 'dayjs';
 
-// Placeholder using native date/time fields. Add @mui/x-date-pickers for a full calendar.
+// Real MUI X pickers. LocalizationProvider (AdapterDayjs) is provided globally
+// in .storybook/preview.tsx, so these work out of the box.
 const meta = {
   title: 'Application Components/Date Picker',
   parameters: { layout: 'centered' },
@@ -9,14 +15,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const DatePicker: Story = {
+export const Pickers: Story = {
   render: () => (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, width: 280 }}>
-      <Typography variant="caption" color="text.secondary">
-        Native fields (core MUI). Swap for MUI X Date Pickers for a calendar UI.
-      </Typography>
-      <TextField type="date" label="Service date" slotProps={{ inputLabel: { shrink: true } }} />
-      <TextField type="time" label="Promised time" slotProps={{ inputLabel: { shrink: true } }} />
+      <DatePicker label="Service date" defaultValue={dayjs()} />
+      <TimePicker label="Promised time" />
+      <DateTimePicker label="Fired at" />
     </Box>
   ),
+};
+
+export const Calendar: Story = {
+  render: () => <DateCalendar defaultValue={dayjs()} />,
 };
