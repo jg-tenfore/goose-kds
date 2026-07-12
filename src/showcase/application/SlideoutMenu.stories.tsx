@@ -24,13 +24,15 @@ function SlideoutDemo() {
         <Box sx={{ width: 260 }} role="presentation" onClick={() => setOpen(false)}>
           <List>
             {[
-              ['All-day counts', <Dashboard />],
-              ['Item availability', <Inventory />],
-              ['Settings', <Settings />],
-            ].map(([text, icon]) => (
-              <ListItemButton key={text as string}>
-                <ListItemIcon>{icon as React.ReactNode}</ListItemIcon>
-                <ListItemText primary={text as string} />
+              { text: 'All-day counts', Icon: Dashboard },
+              { text: 'Item availability', Icon: Inventory },
+              { text: 'Settings', Icon: Settings },
+            ].map(({ text, Icon }) => (
+              <ListItemButton key={text}>
+                <ListItemIcon>
+                  <Icon />
+                </ListItemIcon>
+                <ListItemText primary={text} />
               </ListItemButton>
             ))}
           </List>

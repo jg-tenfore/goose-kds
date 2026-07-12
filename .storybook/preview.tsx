@@ -19,6 +19,22 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: 'todo',
     },
+    // Explicit sidebar order (otherwise Storybook sorts alphabetically).
+    options: {
+      storySort: {
+        order: [
+          'Introduction',
+          'Foundations',
+          ['Colors', 'Typography', 'Spacing', 'Radius', 'Border', 'Effect Styles', 'Icons', 'Logos', 'Images'],
+          'Base Components',
+          'Application Components',
+          'Sign in ∕ Sign up',
+          ['Log in', 'Sign up', 'Forgot password', 'Verification'],
+          'KDS Screens',
+          '*',
+        ],
+      },
+    },
   },
   // Every story renders inside the KDS theme + a date-picker localization context,
   // so MUI and MUI X components are all themed and functional.
