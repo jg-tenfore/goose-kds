@@ -7,31 +7,28 @@ import { Meta } from '@storybook/addon-docs/blocks';
 A **React + MUI (Material UI) + Emotion** component library for the TenFore Kitchen
 Display System, showcased and customized here in Storybook.
 
-## How this is set up
+## Structure
 
-- **Engine:** Vite + React 19 + TypeScript, Storybook (Vite builder).
-- **Components:** [MUI Material UI](https://mui.com/material-ui/) — styled with Emotion.
-- **Customization lives in one place:** `src/theme/theme.ts`. Every story and the app
-  render inside `<ThemeProvider theme={theme}>`, so changing a token there updates the
-  whole library everywhere.
+The sidebar mirrors the **`tf-fox-ds-v1`** organization, populated with MUI components
+(default-styled for now — styling comes later):
 
-## Customizing the library
+- **Foundations** — Colors, Typography, Spacing, Radius, Border, Effect Styles, Icons, Logos
+- **Base Components** — buttons, inputs, selection controls, chips, avatars, tooltips, …
+- **Application Components** — alerts, tables, tabs, modals, steppers, drawers, …
+- **Sign in ∕ Sign up** — Log in, Sign up, Forgot password, Verification screens
 
-Two levers, both in `src/theme/theme.ts`:
+*(KDS application screens — organized by the six feature projects — are added under a
+**KDS Screens** section as they're built.)*
 
-1. **Global tokens** — `palette`, `typography`, `shape`. Change the brand color, the font,
-   the corner radius.
-2. **Per-component** — `components.MuiButton.styleOverrides` (and `defaultProps`). Restyle
-   any MUI component without forking it.
+## Customizing
 
-There are also **custom KDS tokens** (`palette.status.*`) — the ticket-urgency colors
-(normal / warning / late / recalled / priority) promoted to first-class theme values. See
-**Foundations → Palette**.
+Everything renders inside `<ThemeProvider theme={theme}>`, so all customization lives in
+one place: **`src/theme/theme.ts`**.
 
-## Explore
+- **Global tokens:** `palette`, `typography`, `shape`.
+- **Per-component:** `components.MuiButton.styleOverrides` / `defaultProps`, etc.
+- **Custom KDS tokens:** `palette.status.*` (normal / warning / late / recalled / priority) —
+  see **Foundations → Colors**.
 
-- **Foundations → Palette** — brand + KDS status colors.
-- **MUI → Button** — a themed MUI component with live controls.
-
-> Placeholder brand colors are TenFore-flavored — swap them for the official tokens in
-> `src/theme/theme.ts` when finalized.
+> Uses **core Material UI**. MUI X (Data Grid, Date/Time Pickers, Charts) can be added later
+> for richer tables and calendar pickers.
