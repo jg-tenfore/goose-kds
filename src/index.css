@@ -1,0 +1,6 @@
+/* Global resets are handled by MUI <CssBaseline />. Keep this file minimal. */
+html,
+body,
+#root {
+  height: 100%;
+}

@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# 🪿 Goose KDS — Design System
+
+A **React + MUI (Material UI) + Emotion** component library for the TenFore Kitchen
+Display System, showcased and customized here in Storybook.
+
+## How this is set up
+
+- **Engine:** Vite + React 19 + TypeScript, Storybook (Vite builder).
+- **Components:** [MUI Material UI](https://mui.com/material-ui/) — styled with Emotion.
+- **Customization lives in one place:** `src/theme/theme.ts`. Every story and the app
+  render inside `<ThemeProvider theme={theme}>`, so changing a token there updates the
+  whole library everywhere.
+
+## Customizing the library
+
+Two levers, both in `src/theme/theme.ts`:
+
+1. **Global tokens** — `palette`, `typography`, `shape`. Change the brand color, the font,
+   the corner radius.
+2. **Per-component** — `components.MuiButton.styleOverrides` (and `defaultProps`). Restyle
+   any MUI component without forking it.
+
+There are also **custom KDS tokens** (`palette.status.*`) — the ticket-urgency colors
+(normal / warning / late / recalled / priority) promoted to first-class theme values. See
+**Foundations → Palette**.
+
+## Explore
+
+- **Foundations → Palette** — brand + KDS status colors.
+- **MUI → Button** — a themed MUI component with live controls.
+
+> Placeholder brand colors are TenFore-flavored — swap them for the official tokens in
+> `src/theme/theme.ts` when finalized.
