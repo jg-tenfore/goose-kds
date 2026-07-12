@@ -83,7 +83,6 @@ type Story = StoryObj<typeof meta>;
 
 export const AllImages: Story = { name: 'All Images' };
 export const Logos: Story = { args: { only: 'root' } };
-export const Store: Story = { args: { only: 'store' } };
 export const Sagamore: Story = { args: { only: 'sagamore' } };
 export const KettleHills: Story = { args: { only: 'kettleHills' } };
-export const Events: Story = { args: { only: 'events' } };
+export const FloGolf: Story = { args: { only: 'flogolf' } };
