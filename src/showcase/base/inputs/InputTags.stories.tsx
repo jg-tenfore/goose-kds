@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Autocomplete, TextField } from '@mui/material';
 
 const meta = {
-  title: 'Base Components/Inputs/Input Tags',
+  title: 'Components/Forms/Input Tags',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;

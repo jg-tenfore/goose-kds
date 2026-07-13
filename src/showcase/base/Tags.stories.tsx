@@ -3,7 +3,7 @@ import { Chip, Stack } from '@mui/material';
 import Done from '@mui/icons-material/Done';
 
 const meta = {
-  title: 'Base Components/Tags',
+  title: 'Components/Typography & Content/Tags',
   component: Chip,
   tags: ['autodocs'],
 } satisfies Meta<typeof Chip>;

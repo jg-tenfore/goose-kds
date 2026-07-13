@@ -37,7 +37,7 @@ const rows = [
 ];
 
 const meta = {
-  title: 'Application Components/Data Grid',
+  title: 'Components/Layout & Structure/Data Grid',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;

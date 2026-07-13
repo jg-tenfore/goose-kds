@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, ButtonGroup, Stack } from '@mui/material';
 
 const meta = {
-  title: 'Base Components/Button Group',
+  title: 'Components/Actions/Button Group',
   component: ButtonGroup,
   tags: ['autodocs'],
 } satisfies Meta<typeof ButtonGroup>;

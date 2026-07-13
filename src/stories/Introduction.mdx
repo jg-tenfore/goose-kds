@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="Introduction" />
+<Meta title="Getting Started/Introduction" />
 
 # 🪿 Goose KDS — Design System
 
@@ -9,13 +9,15 @@ Display System, showcased and customized here in Storybook.
 
 ## Structure
 
-The sidebar mirrors the **`tf-fox-ds-v1`** organization, populated with MUI components
-(default-styled for now — styling comes later):
+The sidebar mirrors the **`eventpipe-prototype-ds`** organization, populated with MUI
+components (default-styled for now — styling comes later):
 
 - **Foundations** — Colors, Typography, Spacing, Radius, Border, Effect Styles, Icons, Logos
-- **Base Components** — buttons, inputs, selection controls, chips, avatars, tooltips, …
-- **Application Components** — alerts, tables, tabs, modals, steppers, drawers, …
-- **Sign in ∕ Sign up** — Log in, Sign up, Forgot password, Verification screens
+- **Components** — grouped by purpose: **Actions**, **Navigation**, **Forms**,
+  **Feedback & Status**, **Layout & Structure**, **Media & Visuals**, and
+  **Typography & Content**
+- **App Chrome** — application shell pieces such as Header Navigations and Slideout Menu
+- **Account** — Log in, Sign up, Forgot password, Verification screens
 
 *(KDS application screens — organized by the six feature projects — are added under a
 **KDS Screens** section as they're built.)*
@@ -30,5 +32,6 @@ one place: **`src/theme/theme.ts`**.
 - **Custom KDS tokens:** `palette.status.*` (normal / warning / late / recalled / priority) —
   see **Foundations → Colors**.
 
-> Uses **core Material UI** plus **MUI X** — Data Grid (Application → Data Grid) and Date
-> Pickers (Application → Date Picker). `LocalizationProvider` (dayjs) is wired globally.
+> Uses **core Material UI** plus **MUI X** — Data Grid (Components → Layout & Structure →
+> Data Grid) and Date Pickers (Components → Forms → Date Picker). `LocalizationProvider`
+> (dayjs) is wired globally.

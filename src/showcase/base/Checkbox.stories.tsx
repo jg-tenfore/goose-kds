@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Checkbox, FormControlLabel, FormGroup } from '@mui/material';
 
 const meta = {
-  title: 'Base Components/Checkbox',
+  title: 'Components/Forms/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
 } satisfies Meta<typeof Checkbox>;

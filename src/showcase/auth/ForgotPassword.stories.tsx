@@ -24,7 +24,7 @@ function ForgotPassword() {
 }
 
 const meta = {
-  title: 'Sign in ∕ Sign up/Forgot password',
+  title: 'Account/Forgot password',
   component: ForgotPassword,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof ForgotPassword>;

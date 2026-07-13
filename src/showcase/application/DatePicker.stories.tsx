@@ -9,7 +9,7 @@ import dayjs from 'dayjs';
 // Real MUI X pickers. LocalizationProvider (AdapterDayjs) is provided globally
 // in .storybook/preview.tsx, so these work out of the box.
 const meta = {
-  title: 'Application Components/Date Picker',
+  title: 'Components/Forms/Date Picker',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;

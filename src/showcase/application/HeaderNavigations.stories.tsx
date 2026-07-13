@@ -3,7 +3,7 @@ import { AppBar, Avatar, Box, Button, IconButton, Toolbar, Typography } from '@m
 import Menu from '@mui/icons-material/Menu';
 
 const meta = {
-  title: 'Application Components/Header Navigations',
+  title: 'App Chrome/Header Navigations',
   parameters: { layout: 'fullscreen' },
 } satisfies Meta;
 export default meta;

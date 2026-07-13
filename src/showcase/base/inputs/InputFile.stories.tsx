@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { TextField } from '@mui/material';
 
 const meta = {
-  title: 'Base Components/Inputs/Input File',
+  title: 'Components/Forms/Input File',
   component: TextField,
   tags: ['autodocs'],
 } satisfies Meta<typeof TextField>;

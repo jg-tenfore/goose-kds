@@ -24,7 +24,7 @@ function DropdownDemo() {
 }
 
 const meta = {
-  title: 'Base Components/Dropdown',
+  title: 'Components/Actions/Dropdown',
   component: DropdownDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof DropdownDemo>;

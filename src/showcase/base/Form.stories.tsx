@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 
 const meta = {
-  title: 'Base Components/Form',
+  title: 'Components/Forms/Form',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;

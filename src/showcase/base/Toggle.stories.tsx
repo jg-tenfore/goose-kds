@@ -33,7 +33,7 @@ function ToggleDemo() {
 }
 
 const meta = {
-  title: 'Base Components/Toggle',
+  title: 'Components/Forms/Toggle',
   component: ToggleDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof ToggleDemo>;

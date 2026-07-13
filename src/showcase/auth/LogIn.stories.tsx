@@ -61,7 +61,7 @@ function LogIn() {
 }
 
 const meta = {
-  title: 'Sign in ∕ Sign up/Log in',
+  title: 'Account/Log in',
   component: LogIn,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof LogIn>;

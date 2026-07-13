@@ -11,7 +11,7 @@ import {
 import Search from '@mui/icons-material/Search';
 
 const meta = {
-  title: 'Application Components/Filter Bars',
+  title: 'Components/Navigation/Filter Bars',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;

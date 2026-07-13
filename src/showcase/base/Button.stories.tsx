@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Button, Stack } from '@mui/material';
 
 const meta = {
-  title: 'Base Components/Button',
+  title: 'Components/Actions/Button',
   component: Button,
   tags: ['autodocs'],
   args: { children: 'Button', variant: 'contained', color: 'primary', size: 'medium' },

@@ -50,7 +50,7 @@ function Verification() {
 }
 
 const meta = {
-  title: 'Sign in ∕ Sign up/Verification',
+  title: 'Account/Verification',
   component: Verification,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof Verification>;

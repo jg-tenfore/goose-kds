@@ -21,7 +21,7 @@ const color = (s: string) =>
   s === 'Late' ? 'error' : s === 'Warning' ? 'warning' : 'default';
 
 const meta = {
-  title: 'Application Components/Table',
+  title: 'Components/Layout & Structure/Table',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;

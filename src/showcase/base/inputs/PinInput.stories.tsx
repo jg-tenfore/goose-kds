@@ -33,7 +33,7 @@ function PinInputDemo({ length = 4 }: { length?: number }) {
 }
 
 const meta = {
-  title: 'Base Components/Inputs/Pin Input',
+  title: 'Components/Forms/Pin Input',
   component: PinInputDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof PinInputDemo>;
