@@ -5,8 +5,34 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import '@fontsource-variable/roboto';
 import { theme } from '../src/theme';
 
+// Goose KDS runs on landscape kitchen tablets, so stories default to a
+// landscape tablet frame. Switch/reset via the viewport control in the toolbar.
+const KDS_VIEWPORTS = {
+  tabletLandscape: {
+    name: 'Tablet · Landscape',
+    styles: { width: '1280px', height: '800px' },
+    type: 'tablet' as const,
+  },
+  tabletPortrait: {
+    name: 'Tablet · Portrait',
+    styles: { width: '800px', height: '1280px' },
+    type: 'tablet' as const,
+  },
+  ipadLandscape: {
+    name: 'iPad · Landscape',
+    styles: { width: '1024px', height: '768px' },
+    type: 'tablet' as const,
+  },
+};
+
 const preview: Preview = {
+  initialGlobals: {
+    viewport: { value: 'tabletLandscape', isRotated: false },
+  },
   parameters: {
+    viewport: {
+      options: KDS_VIEWPORTS,
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -41,6 +67,20 @@ const preview: Preview = {
           'Account',
           ['Log in', 'Sign up', 'Forgot password', 'Verification'],
           'KDS Screens',
+          [
+            '1 · Foundations & Board',
+            ['Active Board (Open / Pending)', 'Completed View', 'Ticket Card & Detail', 'Board Modes', 'Recently-Fulfilled Strip'],
+            '2 · Order Ingestion & Routing',
+            ['Incoming Order Preview', 'Order Change Markers', 'Cancelled Order State', 'Routing (config in Settings)'],
+            '3 · Fulfillment Actions',
+            ['Item / Ticket Completion', 'Undo Window', 'Recall / Unfulfill', 'Prioritize'],
+            '4 · Expo, Timers & Alerts',
+            ['Expo Board', 'Timer States', 'Cancelled / Modified Treatments'],
+            '5 · Counts & Availability',
+            ['All-Day Counts', 'Production Item Count v1', 'Item Availability'],
+            '6 · Settings & Reliability',
+            ['Settings / Setup', 'PIN Lock', 'Offline / Sync', 'Reporting / Manager Dashboard'],
+          ],
           '*',
         ],
       },
