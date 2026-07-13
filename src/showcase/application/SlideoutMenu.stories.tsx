@@ -43,7 +43,7 @@ function SlideoutDemo() {
 }
 
 const meta = {
-  title: 'Application Components/Slideout Menu',
+  title: 'App Chrome/Slideout Menu',
   component: SlideoutDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof SlideoutDemo>;

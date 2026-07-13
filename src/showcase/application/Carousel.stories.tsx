@@ -39,7 +39,7 @@ function CarouselDemo() {
 }
 
 const meta = {
-  title: 'Application Components/Carousel',
+  title: 'Components/Media & Visuals/Carousel',
   component: CarouselDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof CarouselDemo>;

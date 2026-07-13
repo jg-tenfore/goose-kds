@@ -3,7 +3,7 @@ import { Box, TextField } from '@mui/material';
 
 // Native date/time fields (core MUI). Swap for MUI X Date Pickers later for calendars.
 const meta = {
-  title: 'Base Components/Inputs/Input Date',
+  title: 'Components/Forms/Input Date',
   component: TextField,
   tags: ['autodocs'],
 } satisfies Meta<typeof TextField>;

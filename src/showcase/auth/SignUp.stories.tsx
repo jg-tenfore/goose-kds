@@ -29,7 +29,7 @@ function SignUp() {
 }
 
 const meta = {
-  title: 'Sign in ∕ Sign up/Sign up',
+  title: 'Account/Sign up',
   component: SignUp,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof SignUp>;

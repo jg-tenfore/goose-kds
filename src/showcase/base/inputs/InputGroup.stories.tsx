@@ -4,7 +4,7 @@ import Search from '@mui/icons-material/Search';
 import AttachMoney from '@mui/icons-material/AttachMoney';
 
 const meta = {
-  title: 'Base Components/Inputs/Input Group',
+  title: 'Components/Forms/Input Group',
   component: TextField,
   tags: ['autodocs'],
 } satisfies Meta<typeof TextField>;

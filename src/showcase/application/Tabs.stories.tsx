@@ -22,7 +22,7 @@ function TabsDemo() {
 }
 
 const meta = {
-  title: 'Application Components/Tabs',
+  title: 'Components/Navigation/Tabs',
   component: TabsDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof TabsDemo>;

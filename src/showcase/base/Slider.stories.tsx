@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Box, Slider, Typography } from '@mui/material';
 
 const meta = {
-  title: 'Base Components/Slider',
+  title: 'Components/Forms/Slider',
   component: Slider,
   tags: ['autodocs'],
 } satisfies Meta<typeof Slider>;

@@ -36,7 +36,7 @@ function ModalDemo() {
 }
 
 const meta = {
-  title: 'Application Components/Modal',
+  title: 'Components/Actions/Modal',
   component: ModalDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof ModalDemo>;

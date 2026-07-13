@@ -23,12 +23,22 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
-          'Introduction',
+          'Getting Started',
+          ['Introduction'],
           'Foundations',
           ['Colors', 'Typography', 'Spacing', 'Radius', 'Border', 'Effect Styles', 'Icons', 'Logos', 'Images'],
-          'Base Components',
-          'Application Components',
-          'Sign in ∕ Sign up',
+          'Components',
+          [
+            'Actions',
+            'Navigation',
+            'Forms',
+            'Feedback & Status',
+            'Layout & Structure',
+            'Media & Visuals',
+            'Typography & Content',
+          ],
+          'App Chrome',
+          'Account',
           ['Log in', 'Sign up', 'Forgot password', 'Verification'],
           'KDS Screens',
           '*',

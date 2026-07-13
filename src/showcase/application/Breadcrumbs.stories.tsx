@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Breadcrumbs, Link, Typography } from '@mui/material';
 
 const meta = {
-  title: 'Application Components/Breadcrumbs',
+  title: 'Components/Navigation/Breadcrumbs',
   component: Breadcrumbs,
   tags: ['autodocs'],
 } satisfies Meta<typeof Breadcrumbs>;

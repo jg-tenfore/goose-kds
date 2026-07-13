@@ -34,7 +34,7 @@ function MultiSelectDemo() {
 }
 
 const meta = {
-  title: 'Base Components/Multi-Select',
+  title: 'Components/Forms/Multi-Select',
   component: MultiSelectDemo,
   parameters: { layout: 'centered' },
 } satisfies Meta<typeof MultiSelectDemo>;

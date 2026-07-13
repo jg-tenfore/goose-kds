@@ -12,7 +12,7 @@ import {
 import MoreVert from '@mui/icons-material/MoreVert';
 
 const meta = {
-  title: 'Application Components/Card Headers',
+  title: 'Components/Layout & Structure/Card Headers',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;

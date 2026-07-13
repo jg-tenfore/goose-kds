@@ -4,7 +4,7 @@ import { Step, StepLabel, Stepper } from '@mui/material';
 const STEPS = ['Received', 'In prep', 'Ready', 'Handed off'];
 
 const meta = {
-  title: 'Application Components/Progress Steps',
+  title: 'Components/Navigation/Progress Steps',
   parameters: { layout: 'centered' },
 } satisfies Meta;
 export default meta;
