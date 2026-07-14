@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Box, Button, Divider, Link, Paper, Stack, TextField, Typography } from '@mui/material';
 import Google from '@mui/icons-material/Google';
-import tfLogo from '../../assets/images/tf-logo.svg';
+import tfMark from '../../assets/images/square/tf-square-color.svg';
 
 function SignUp() {
   return (
     <Paper variant="outlined" sx={{ p: 4, width: 380 }}>
       <Stack spacing={2.5}>
         <Box sx={{ textAlign: 'center' }}>
-          <Box component="img" src={tfLogo} alt="TenFore" sx={{ height: 40, mb: 1.5 }} />
+          <Box component="img" src={tfMark} alt="TenFore Golf" sx={{ height: 56, mb: 1.5 }} />
           <Typography variant="h6">Create your account</Typography>
         </Box>
         <TextField label="Full name" fullWidth />

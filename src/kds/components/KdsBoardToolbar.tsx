@@ -29,10 +29,14 @@ export function KdsBoardToolbar({
   pageCount = 1,
 }: KdsBoardToolbarProps) {
   const { palette } = useTheme();
+  const isDark = palette.mode === 'dark';
   const chromeBtn = {
-    bgcolor: palette.mode === 'dark' ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.05)',
+    // Bright icon (default IconButton uses dim action.active — invisible on black).
+    color: palette.text.primary,
+    bgcolor: isDark ? 'rgba(255,255,255,0.16)' : 'rgba(0,0,0,0.06)',
     borderRadius: 1.5,
-    '&:hover': { bgcolor: palette.mode === 'dark' ? 'rgba(255,255,255,0.16)' : 'rgba(0,0,0,0.1)' },
+    '&:hover': { bgcolor: isDark ? 'rgba(255,255,255,0.26)' : 'rgba(0,0,0,0.1)' },
+    '&.Mui-disabled': { color: isDark ? 'rgba(255,255,255,0.32)' : 'rgba(0,0,0,0.26)', bgcolor: isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.03)' },
   };
 
   return (

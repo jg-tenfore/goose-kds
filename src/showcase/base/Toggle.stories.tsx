@@ -1,20 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import {
-  Box,
-  FormControlLabel,
-  Switch,
-  ToggleButton,
-  ToggleButtonGroup,
-} from '@mui/material';
+import { Box, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import ViewModule from '@mui/icons-material/ViewModule';
 import ViewStream from '@mui/icons-material/ViewStream';
 
+/**
+ * ToggleButtonGroup — a segmented, mutually-exclusive choice such as the KDS
+ * board view mode (dynamic flow vs fixed grid). For a binary on/off setting,
+ * use the Switch instead.
+ */
 function ToggleDemo() {
   const [mode, setMode] = useState('flow');
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'flex-start' }}>
-      <FormControlLabel control={<Switch defaultChecked />} label="New-ticket sound" />
       <ToggleButtonGroup
         exclusive
         value={mode}
@@ -33,9 +31,19 @@ function ToggleDemo() {
 }
 
 const meta = {
-  title: 'Components/Forms/Toggle',
+  title: 'Components/Forms/Toggle Button',
   component: ToggleDemo,
-  parameters: { layout: 'centered' },
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+    docs: {
+      description: {
+        component:
+          'MUI `ToggleButtonGroup` for a segmented, mutually-exclusive choice — for example the KDS board view mode (dynamic flow vs fixed grid). ' +
+          'Click a button to switch modes. For a binary on/off setting use **Switch** instead.',
+      },
+    },
+  },
 } satisfies Meta<typeof ToggleDemo>;
 export default meta;
 type Story = StoryObj<typeof meta>;
