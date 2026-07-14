@@ -58,7 +58,13 @@ export const theme = createTheme({
         sizeLarge: { padding: '10px 22px', fontSize: '1rem', minHeight: 48 },
       },
     },
-    MuiButtonGroup: { defaultProps: { size: 'large' } },
+    MuiButtonGroup: {
+      // Buttons are pill-shaped (borderRadius 999), so drop the group's default
+      // "contained" drop-shadow (a radius-10 rectangle that peeked out behind the
+      // pill) and round the group to match.
+      defaultProps: { size: 'large', disableElevation: true },
+      styleOverrides: { root: { borderRadius: 999 } },
+    },
     MuiIconButton: {
       defaultProps: { size: 'large' },
       styleOverrides: { root: { '& .MuiSvgIcon-root': { fontSize: 26 } } },
@@ -82,13 +88,8 @@ export const theme = createTheme({
     MuiRadio: {
       styleOverrides: { root: { padding: 10, '& .MuiSvgIcon-root': { fontSize: 28 } } },
     },
-    MuiSwitch: {
-      styleOverrides: {
-        root: { padding: 8 },
-        switchBase: { padding: 12 },
-        thumb: { width: 20, height: 20 },
-      },
-    },
+    // Native MUI Switch geometry — the previous override enlarged the thumb
+    // without resizing the track, so the checked thumb overhung the track.
     MuiSlider: {
       styleOverrides: {
         thumb: { width: 22, height: 22 },

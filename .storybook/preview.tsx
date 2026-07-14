@@ -26,6 +26,8 @@ const KDS_VIEWPORTS = {
 };
 
 const preview: Preview = {
+  // Generate a Docs page for every story (previously only ~18 stories opted in).
+  tags: ['autodocs'],
   initialGlobals: {
     viewport: { value: 'tabletLandscape', isRotated: false },
   },

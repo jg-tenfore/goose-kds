@@ -91,9 +91,11 @@ export interface KdsTicketCardProps {
   ticket: Ticket;
   /** Fixed card width in the flow/grid. */
   width?: number;
+  /** Fill the parent's height (used by rail/grid layouts) and clip overflow. */
+  fillHeight?: boolean;
 }
 
-export function KdsTicketCard({ ticket, width = 260 }: KdsTicketCardProps) {
+export function KdsTicketCard({ ticket, width = 260, fillHeight = false }: KdsTicketCardProps) {
   const { palette } = useTheme();
   const stateMeta = useStateMeta(ticket.state);
   const StateIcon = stateMeta?.icon;
@@ -102,6 +104,7 @@ export function KdsTicketCard({ ticket, width = 260 }: KdsTicketCardProps) {
     <Box
       sx={{
         width,
+        height: fillHeight ? '100%' : undefined,
         bgcolor: palette.board.card,
         color: palette.board.cardText,
         borderRadius: 1.5,

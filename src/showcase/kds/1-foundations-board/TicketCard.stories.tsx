@@ -3,7 +3,6 @@ import { Box, ThemeProvider } from '@mui/material';
 import { KdsTicketCard } from '../../../kds/components/KdsTicketCard';
 import { createKdsTheme } from '../../../kds/theme';
 import { seedTickets } from '../../../kds/fixtures';
-import type { Ticket } from '../../../kds/types';
 
 const byId = (id: string) => seedTickets.find((t) => t.id === id)!;
 
@@ -24,43 +23,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** Multi-course ticket with modifiers, courses, fire chip, and overflow footer. */
-export const Standard: Story = { args: { ticket: byId('t-108') } };
+/** Standard takeout ticket — modifiers, multiple items (turn-window mobile order). */
+export const Standard: Story = { args: { ticket: byId('t-mobile-a47') } };
 
-/** Prioritized — accent stripe + labeled banner (legible without color alone). */
-export const Prioritized: Story = { args: { ticket: byId('t-25') } };
+/** Prioritized — group with an imminent tee time; accent stripe + labeled banner. */
+export const Prioritized: Story = { args: { ticket: byId('t-shotgun') } };
 
-/** Late — with a fire-timer feel via state banner. */
-export const Late: Story = { args: { ticket: byId('t-cambria') } };
+/** Late — takeout past the wait window while the kitchen is backed up. */
+export const Late: Story = { args: { ticket: byId('t-mobile-a51') } };
 
-/** Recalled — brought back after completion, with an allergy/VIP elevation. */
-export const Recalled: Story = { args: { ticket: byId('t-kurt') } };
+/** Recalled — bumped too early, brought back for a remake. */
+export const Recalled: Story = { args: { ticket: byId('t-t3') } };
 
-/** Long content that overflows into the next column ("Continued…"). */
-export const Warning: Story = { args: { ticket: byId('t-jonny') } };
+/** Warning — dine-in approaching the wait window. */
+export const Warning: Story = { args: { ticket: byId('t-t6') } };
 
-const allergyTicket: Ticket = {
-  id: 'demo-allergy',
-  label: 'Table 12',
-  source: 'pos',
-  fulfillment: 'for-here',
-  elapsedLabel: '2m',
-  state: 'active',
-  courses: [
-    {
-      name: '',
-      items: [
-        {
-          id: 'x1',
-          quantity: 1,
-          name: 'Pad Thai',
-          modifiers: [{ label: 'Add Shrimp', kind: 'add' }],
-          allergy: 'PEANUT ALLERGY',
-        },
-      ],
-    },
-  ],
-};
+/** Coursed ticket (Starters/Mains) with fire chip and "Continued…" overflow. */
+export const Coursed: Story = { args: { ticket: byId('t-t9') } };
 
 /** Allergy elevation — critical note is surfaced, never silently truncated. */
-export const AllergyElevation: Story = { args: { ticket: allergyTicket } };
+export const AllergyElevation: Story = { args: { ticket: byId('t-t1') } };

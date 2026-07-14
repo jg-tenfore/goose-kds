@@ -76,7 +76,16 @@ export interface Ticket {
   continued?: boolean;
 }
 
-export type BoardMode = 'flow' | 'grid';
+/**
+ * Board layout modes (TF-161), matching the Settings › Layout options:
+ *  - `flex-rail`  — dynamic column-wrap flow, variable card heights (a.k.a. `flow`)
+ *  - `tile-fill`  — masonry packing, columns auto-balanced to fit the most tickets
+ *  - `1-rail`     — one row of full-height ticket columns, horizontal scroll
+ *  - `2-rails`    — a 2-row grid of equal cells flowing into columns
+ *  - `3-rails`    — a 3-row grid, densest layout
+ * `flow`/`grid` are kept as aliases for `flex-rail`/`2-rails`.
+ */
+export type BoardMode = 'flex-rail' | 'tile-fill' | '1-rail' | '2-rails' | '3-rails' | 'flow' | 'grid';
 export type BoardView = 'open' | 'completed';
 
 export const FULFILLMENT_LABELS: Record<FulfillmentType, string> = {

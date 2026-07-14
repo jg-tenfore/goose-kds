@@ -30,9 +30,9 @@ export function KdsAppShell({
   mode = 'dark',
   boardMode = 'flow',
   initialView = 'open',
-  stationName = 'TenFore KDS — Expo',
-  time = '5:52 PM',
-  orderSources = 62,
+  stationName = 'TenFore Grill — The Turn',
+  time = '11:42 AM',
+  orderSources = 7,
   online = true,
 }: KdsAppShellProps) {
   const theme = useMemo(() => createKdsTheme(mode), [mode]);
